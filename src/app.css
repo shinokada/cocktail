@@ -11,6 +11,6 @@
       @apply text-2xl py-4 dark:text-white;
     }
     p {
-        @apply text-base py-4 dark:text-white;
+        @apply text-base py-1 dark:text-white;
     }
   }
