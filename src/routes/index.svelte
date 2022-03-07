@@ -27,7 +27,7 @@
 </script>
 
 <div class="wrapper">
-	<h1>Welcome to Clevenger Cocktail</h1>
+	<h1>Welcome to Clevenger Cocktail Website</h1>
 	<button on:click={handleOnClick}>Get new drink</button>
 	<h2>{drinkState.name}</h2>
 	<img src={drinkState.thumbUrl} alt="drink-thumb" class="drink-thumb" />
