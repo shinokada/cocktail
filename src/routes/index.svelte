@@ -30,12 +30,12 @@
 	<div class="pt-4">
 		<Card header={drinkState.name} img={drinkState.thumbUrl}>
 			<p class="text-left">{drinkState.instructions}</p>
+			<h2>Ingredients</h2>
+			{#each drinkState.ingredients as ingredient}
+				<p class="ingredient">{ingredient.amount}{ingredient.name}</p>
+			{/each}
 		</Card>
 	</div>
-	<h2>Ingredients</h2>
-	{#each drinkState.ingredients as ingredient}
-		<p class="ingredient">{ingredient.amount}{ingredient.name}</p>
-	{/each}
 </div>
 
 <style>
