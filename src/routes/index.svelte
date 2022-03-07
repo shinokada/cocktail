@@ -27,10 +27,13 @@
 </script>
 
 <div class="wrapper">
+	<h1>Welcome to Clevenger Cocktail</h1>
 	<button on:click={handleOnClick}>Get new drink</button>
 	<h2>{drinkState.name}</h2>
 	<img src={drinkState.thumbUrl} alt="drink-thumb" class="drink-thumb" />
+	<h2>Instruction</h2>
 	<p>{drinkState.instructions}</p>
+	<h2>Ingredients</h2>
 	{#each drinkState.ingredients as ingredient}
 		<p class="ingredient">{ingredient.amount}{ingredient.name}</p>
 	{/each}
