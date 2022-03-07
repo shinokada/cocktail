@@ -17,6 +17,7 @@
 </script>
 
 <script lang="ts">
+	import { Button } from 'flowbite-svelte';
 	export let drinkProp: DrinkType;
 	let drinkState: DrinkType = drinkProp;
 
@@ -28,7 +29,8 @@
 
 <div class="wrapper">
 	<h1>Welcome to Clevenger Cocktail Website</h1>
-	<button on:click={handleOnClick}>Get new drink</button>
+	<Button name="Get new drink" on:click={handleOnClick} textSize="text-base" />
+
 	<h2>{drinkState.name}</h2>
 	<img src={drinkState.thumbUrl} alt="drink-thumb" class="drink-thumb" />
 	<h2>Instruction</h2>

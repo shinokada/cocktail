@@ -1,0 +1,16 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+      @apply text-3xl py-8 dark:text-white;
+    }
+    h2 {
+      @apply text-2xl py-4 dark:text-white;
+    }
+    p {
+        @apply text-base py-4 dark:text-white;
+    }
+  }
