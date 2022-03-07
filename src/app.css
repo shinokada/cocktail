@@ -5,10 +5,10 @@
 
 @layer base {
     h1 {
-      @apply text-3xl py-8 dark:text-white;
+      @apply text-3xl py-4 dark:text-white;
     }
     h2 {
-      @apply text-2xl py-4 dark:text-white;
+      @apply text-2xl py-8 dark:text-white;
     }
     p {
         @apply text-base py-1 dark:text-white;

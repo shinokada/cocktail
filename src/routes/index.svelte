@@ -3,10 +3,6 @@
 	export async function load({ fetch }) {
 		const url = 'api/cocktail.json';
 		const response = await fetch(url);
-		// console.log(url);
-		// const drink: DrinkType = await (await fetch('index.json')).json();
-		// console.log('drink: ', drink);
-		// console.log('response:', response.status);
 		return {
 			status: response.status,
 			props: {
@@ -17,7 +13,7 @@
 </script>
 
 <script lang="ts">
-	import { Button } from 'flowbite-svelte';
+	import { Button, Card } from 'flowbite-svelte';
 	export let drinkProp: DrinkType;
 	let drinkState: DrinkType = drinkProp;
 
@@ -27,14 +23,15 @@
 	};
 </script>
 
-<div class="wrapper">
+<div class="wrapper py-16">
 	<h1>Welcome to Clevenger Cocktail Website</h1>
-	<Button name="Get new drink" on:click={handleOnClick} textSize="text-base" />
+	<Button name="Get a new drink" on:click={handleOnClick} textSize="text-base" />
 
-	<h2>{drinkState.name}</h2>
-	<img src={drinkState.thumbUrl} alt="drink-thumb" class="drink-thumb" />
-	<h2>Instruction</h2>
-	<p>{drinkState.instructions}</p>
+	<div class="pt-4">
+		<Card header={drinkState.name} img={drinkState.thumbUrl}>
+			<p class="text-left">{drinkState.instructions}</p>
+		</Card>
+	</div>
 	<h2>Ingredients</h2>
 	{#each drinkState.ingredients as ingredient}
 		<p class="ingredient">{ingredient.amount}{ingredient.name}</p>
@@ -47,19 +44,5 @@
 		flex-direction: column;
 		align-items: center;
 		font-family: Arial, Helvetica, sans-serif;
-	}
-
-	.drink-thumb {
-		width: 300px;
-		border-radius: 1rem;
-	}
-
-	p {
-		max-width: 500px;
-		text-align: center;
-	}
-
-	.ingredient {
-		margin: 2px 0;
 	}
 </style>
