@@ -23,8 +23,8 @@
 	};
 </script>
 
-<div class="wrapper py-16">
-	<h1>Welcome to Clevenger Cocktail Website</h1>
+<div class="wrapper py-16 px-4">
+	<h1 class="text-center">Welcome to Clevenger Cocktail Website</h1>
 	<Button name="Get a new drink" on:click={handleOnClick} textSize="text-base" />
 
 	<div class="pt-4">
